@@ -1,6 +1,6 @@
 name: Azure Static Web Apps CI/CD
 
-"on":
+on:
   push:
     branches:
       - main
@@ -28,7 +28,7 @@ jobs:
           action: "upload"
           app_location: "src"
           api_location: "api"
-          output_location: "src"
+          output_location: ""
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
