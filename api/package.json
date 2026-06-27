@@ -1,7 +1,5 @@
 {
-  "name": "azure-static-backend-api",
-  "version": "1.0.0",
-  "dependencies": {
-    "@azure/cosmos": "^4.0.0"
-  }
+"name": "azure-static-backend-api",
+"version": "1.0.0",
+"dependencies": { "@azure/cosmos": "^4.0.0" }
 }
