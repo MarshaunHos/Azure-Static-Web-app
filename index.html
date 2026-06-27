@@ -1,34 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Cloud Support Portfolio</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding-top: 50px; background-color: #F4F4F9; }
-        .counter-box { background: white; padding: 20px; display: inline-block; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        #counter { font-size: 2rem; font-weight: bold; color: #0078D4; }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cloud Support Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+            background-color: #F4F4F9;
+        }
+
+        .counter-box {
+            background: white;
+            padding: 20px;
+            display: inline-block;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #counter {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #0078D4;
+        }
+    </style>
 </head>
 <body>
-    <h1>Marshaun Hoskins - Entry-Level Cloud Engineer</h1>
-    <p>Welcome to my cloud resume site hosted on Azure Static Web Apps!</p>
+    <h1>Marshaun Hoskins - Entry-Level Cloud Engineer</h1>
+    <p>Welcome to my cloud resume site hosted on Azure Static Web Apps!</p>
 
-    <div class="counter-box">
-        <p>Visitor Count:</p>
-        <div id="counter">Loading...</div>
-    </div>
+    <div class="counter-box">
+        <p>Visitor Count:</p>
+        <div id="counter">Loading...</div>
+    </div>
 
-    <script>
-        fetch('/api/visitor-counter')
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('counter').textContent = data.count;
-            })
-            .catch(error => {
-                console.error('Error fetching visitor count:', error);
-                document.getElementById('counter').textContent = 'Error loading count';
-            });
-    </script>
+    <script>
+        fetch('/api/visitor-counter')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('counter').textContent = data.count;
+            })
+            .catch(error => {
+                console.error('Error fetching visitor count:', error);
+                document.getElementById('counter').textContent = 'Error loading count';
+            });
+    </script>
 </body>
 </html>
